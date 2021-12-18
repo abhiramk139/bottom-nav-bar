@@ -1,0 +1,96 @@
+<!-- <button mat-raised-button
+        class="example-action-button"
+        (click)="toggleBackground()">
+  Toggle background
+</button>
+
+<nav mat-tab-nav-bar [backgroundColor]="background">
+  <a mat-tab-link *ngFor="let link of links"
+     (click)="activeLink = link"
+     [active]="activeLink == link"> {{ link }} </a>
+  <a mat-tab-link disabled>Disabled Link</a>
+</nav> -->
+<div id="footer">
+
+    <mat-tab-group headerPosition="below" (selectedTabChange)="changeTab($event)">
+        <mat-tab>
+            <!-- #docregion label-directive -->
+            <ng-template mat-tab-label>
+                <div [ngClass]="tab1Css">
+                    <mat-icon class="icon example-tab-icon">home</mat-icon>
+                    <br />
+                    <div class="tab">
+                        Home
+                    </div>
+                </div>
+
+            </ng-template>
+            <!-- #enddocregion label-directive -->
+            <div class="content">
+                Content 1
+            </div>
+           
+        </mat-tab>
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <div [ngClass]="tab2Css">
+                    <mat-icon class="icon example-tab-icon">speaker</mat-icon>
+                    <br />
+                    <div class="tab">
+                        Jump
+                    </div>
+                </div>
+            </ng-template>
+            <div class="content">
+                Content 2
+            </div>
+           
+        </mat-tab>
+
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <div [ngClass]="tab3Css">
+                    <mat-icon class="icon example-tab-icon">speaker</mat-icon>
+                    <br />
+                    <div class="tab">
+                        Events
+                    </div>
+                </div>
+            </ng-template>
+            <div class="content">
+                Content 3
+            </div>
+         
+        </mat-tab>
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <div [ngClass]="tab4Css">
+                    <mat-icon class="icon example-tab-icon">speaker</mat-icon>
+                    <br />
+                    <div class="tab">
+                        Stats
+                    </div>
+                </div>
+            </ng-template>
+            <div class="content">
+                Content 4
+            </div>
+           
+        </mat-tab>
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <div [ngClass]="tab5Css">
+                    <mat-icon class="icon example-tab-icon">person_add</mat-icon>
+                    <br />
+                    <div class="tab">
+                        Invite
+                    </div>
+                </div>
+            </ng-template>
+
+            <button class="invite-btn"> INVITE</button>
+        </mat-tab>
+    </mat-tab-group>
+
+</div>
